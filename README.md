@@ -1,73 +1,121 @@
 # Auth0
 
-What is Authentication? 
-Authentication is the process of verifying the identity of a user, device, or system to make sure they are who (or what) they claim to be.
+# Customer Identity and Access Management (CIAM) — Theory
 
-Passwordless Authentication 
-It is a security method that allows users to log in without using a traditional password. Instead, it verifies identity using more secure and user-friendly alternatives.
+This repository provides a high-level overview of **Customer Identity and Access Management (CIAM)** concepts, focusing on authentication, passwordless authentication, passkeys, authorization models, and IAM fundamentals.
 
-Two PasswordLess Approaches
+---
 
-One-time passcode: biometrics or magic links via Email/SMS
-Passkeys: Based on WebAuthn standard and FIDO Alliance
+## 📌 What is Authentication?
 
+**Authentication** is the process of verifying the identity of a user, device, or system to ensure they are who (or what) they claim to be.
 
-How Passkeys Work --
-1. Private Key stays on your device
-2. Public Key stored on the server
-3. Device signs a server challenge with the private key
-4. Server verifies with the public key
+---
 
+## 🔐 Passwordless Authentication
 
-Benefits of Passkeys
+**Passwordless Authentication** is a security approach that allows users to sign in without traditional passwords.  
+Instead, it uses more secure and user-friendly alternatives to verify identity.
 
-Multi-Factor Authentication: Biometrics or hardware-based
-Device-Independent: syncs across devices
-Phishing-Resistant: No password to steal
-Security: Strong encryption
-Convenience: No need to remember passwords
-No password resets: Eliminates the need for recovery steps
+### Passwordless Authentication Approaches
 
+1. **One-Time Passcodes (OTP), Biometrics, or Magic Links**
+   - Delivered via **Email** or **SMS**
+2. **Passkeys**
+   - Based on the **WebAuthn** standard and supported by the **FIDO Alliance**
 
-Passkey Flow: Registration
+---
 
-User visits website/app for the first time
-Server generates a challenge
-Device signs challenge with private key(after biometric/PIN verification)
-Public key is sent to the server for future logins
+## 🔑 Passkeys
 
+Passkeys replace passwords with cryptographic key pairs for stronger and phishing-resistant authentication.
 
-Passkey Flow: Authentication
+### How Passkeys Work
 
-Server sends a new challenge
-Device signs it with the private key(after biometric/PIN verification)
-Server verifies signature with the stored public key
-User is authenticated
+- 🔒 **Private Key** stays securely on the user’s device
+- 🌐 **Public Key** is stored on the server
+- ✍️ Device signs a server-generated challenge using the private key
+- ✅ Server verifies the signature using the public key
 
+---
 
-Types of Authorization Models
+### ✅ Benefits of Passkeys
 
-Role-Based Access Control(RBAC)
-Attribute-Based Access Control(ABAC)
-Policy-BAsed Access Control
+1. **Multi-Factor Authentication**
+   - Uses biometrics or hardware-based verification
+2. **Device-Independent**
+   - Can sync securely across devices
+3. **Phishing-Resistant**
+   - No passwords to steal or reuse
+4. **High Security**
+   - Strong public-key cryptography
+5. **User Convenience**
+   - No passwords to remember
+6. **No Password Resets**
+   - Eliminates recovery and reset flows
 
+---
 
-What is Identity and Access Management (IAM)? 
-It is a framework of policies, processes, and technologies used to ensure that the right people (or systems) have the right access to the right resources at the right time
+## 🔁 Passkey Authentication Flows
 
-Three Fundamental Pillars of IAM
+### Registration Flow
 
-User Authentication
-User Authorization
-User Management
+1. User visits the website or application for the first time
+2. Server generates a cryptographic challenge
+3. Device signs the challenge after biometric or PIN verification
+4. Public key is sent and stored on the server for future logins
 
-Key IAM Features
+---
 
-Automation and centralization
-Enforced Security Controls
-Enhanced User Experience
+### Authentication Flow
 
-Importance of IAM for Compliance and Security
+1. Server sends a new challenge
+2. Device signs the challenge using the private key (after biometric/PIN verification)
+3. Server verifies the signature using the stored public key
+4. User is successfully authenticated
 
-Protect digital
-Ensure regulatory Compliance
+---
+
+## 🛂 Authorization Models
+
+Authorization determines **what an authenticated user is allowed to do**.
+
+### Common Authorization Models
+
+1. **Role-Based Access Control (RBAC)**
+   - Access based on assigned roles
+2. **Attribute-Based Access Control (ABAC)**
+   - Access based on user, resource, and environment attributes
+3. **Policy-Based Access Control (PBAC)**
+   - Access driven by defined policies and rules
+
+---
+
+## 🧩 What is Identity and Access Management (IAM)?
+
+**Identity and Access Management (IAM)** is a framework of policies, processes, and technologies that ensures:
+
+> The right people (or systems) have the right access to the right resources at the right time.
+
+---
+
+### 🏛 Three Fundamental Pillars of IAM
+
+1. **User Authentication**
+2. **User Authorization**
+3. **User Management**
+
+---
+
+## ⚙️ Key IAM Features
+
+1. **Automation and Centralization**
+2. **Enforced Security Controls**
+3. **Enhanced User Experience**
+
+---
+
+## 🔐 Importance of IAM for Security & Compliance
+
+1. **Protect Digital Resources**
+2. **Ensure Regulatory Compliance**
