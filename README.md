@@ -119,3 +119,27 @@ Authorization determines **what an authenticated user is allowed to do**.
 
 1. **Protect Digital Resources**
 2. **Ensure Regulatory Compliance**
+
+
+## What is CIAM?
+
+Customer Identity and Access Management (CIAM) manages customer identities, authentication, authorization, and profile data for consumer-facing applications and digital services.
+
+#### Key Feature
+1. User Registration and login
+2. Social Login
+3. Multi-factor Authentication(MFA)
+4. Single sign-on (SSO)
+5. Passwordless Authentication
+6. User lifecycle Management
+
+
+### key Protocols in CIAM
+1. OAuth 2.0 : Used for authorization, granting access to resources without sharing credentials.
+2. OpenID Connect (OIDC): Adds an identity layer to oAuth 2.0, handling both authentication and authorization.
+3. SAML: An older but widely used protocol for exchanging authentication and authorization data.
+
+## Identity Providers(IdPS) in CIAM
+1. Identity Providers(IdPs) are critical in CIAM,Managing user authentication.
+2. IdPs verify user identity and provide secure access to services without handling passwords directly.
+3. For CIAM, using IdPs like Auth0 simplifies identity management across platforms.
