@@ -143,3 +143,7 @@ Customer Identity and Access Management (CIAM) manages customer identities, auth
 1. Identity Providers(IdPs) are critical in CIAM,Managing user authentication.
 2. IdPs verify user identity and provide secure access to services without handling passwords directly.
 3. For CIAM, using IdPs like Auth0 simplifies identity management across platforms.
+
+
+#### Auth0 - protocols
+
